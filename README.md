@@ -51,6 +51,11 @@ SciKitLearn may also be used in the analysis process.
 
 ### **Proposal ERD Diagram**
 
+Our diagram is diplayed on the following image
+
+![ERD](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/DataCoSupplyChain_ER-Diagram.png)
+
+Description of the diagram -> [ERD Diagram](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Colaboration/Deliverable%201.docx)
 
 ### **Proposal Machine Learning model**
 

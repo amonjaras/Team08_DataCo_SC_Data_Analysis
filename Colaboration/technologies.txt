@@ -1,0 +1,16 @@
+# Technologies Used
+
+## Data Cleaning and Analysis
+We will use Pandas and Jupyter Notebook to clean and sort our data and use Python to further explore our data.
+
+## Database Storage
+We intend to use Postgres to create our database and house the data on AWS so all group members will have access to the database.
+
+## Machine Learning
+SciKitLearn is the ML library we'll be using to create a supervised machine learning regression model. 
+Our training and testing setup will be used to verify precision and sensitivity, and we will use the summary statistics output 
+to determine the most accurate model to use.
+
+## Dashboard
+Tableau will be used as our visualization tool to create an interactive dashboard to tell the story of the data.  Graphs and plots from Plotly and 
+SciKitLearn may also be used in the analysis process.
