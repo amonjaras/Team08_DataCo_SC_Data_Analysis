@@ -1,64 +1,151 @@
-# **DataCo Supply Chain Data Analysis**
-UofT Team 8 Final Project
+# **DataCo Supply Chain Project**
 
-## **Group Members**
+## **Index**
 
-| Member | Role | Responsibilities |
-| :----: | :----: | :----: |
-| Audrey MONJARAS | Square Role | Will be responsible for setting up the repository, including naming and adding team members. |
-| Brent NEWMAN | X Role | Will focus on the technology side of the project. |
-| Anureet VIRDI | Circle Role | In charge of the mockup database. Using a SQL-based database, including an ERD of the database and a document pointing out how it is integrated into the database and how it works with the code. |
-| Brandon-Scott WILLIAMS | Triangle Role | Responsible for creating a simple machine learning model |
+- [Our Team](#our-team)
+- [Overview](#overview)
+- [Business Problem](#business-problem)
+- [Our Goal](#our-goal)
+- [Resources](#resources)
+- [ERD](#entity-relationship-diagram-(erd))
+- [Data Analysis](#data-analysis)
+- [Acknowledgements](#acknowledgements)
 
-All members will work together on each stage of the project.
+### **Our Team**
 
-## **Phase 1: Sketch It Out**
+| Member |
+| :----: |
+| ⏺ MONJARAS Audrey |
+| ⏹ NEWMAN Brent |
+| ❎ VIRDI Anureet |
+| 🔼 WILLIAMS Brandon-Scott |
 
-### **Selected Topic: Supply Chain disruption**
+### **Overview**
 
-#### **Overview**
+DataCo Global is a company dedicated to provisioning, production, sales and commercial distribution. DataCo has a global distribution within five different markets:
 
-Since supply change disruptions have a negative impact on a global production and positive impact on inflation. For this reason, our project will consist on determine whether a delivery will be late and the impact that has on the shipments.
+- Africa
+- Europe
+- LATAM
+- Pacific Asia
+- USCA
 
-### **Questions we would like to answer**
+DataCo has 3 different types of products in the market:
 
-- How to predict the supply chain disruptions?
+- Clothing
+- Sports
+- Electronic Supplies
 
-- What type of features are impacting those disruptions?
+### **Business Problem**
 
-### **Technologies and Tools**
-Our proposal for tools are as follows:
+During the last 5 years DataCo Global has experienced an increase on "Late deliveries" in all the markets. Business Managers and Directors from DataCo Global are looking for a solution to improve and have their company recognized as On-time delivery.
 
-| Technologies | Languages | Tools |
-| :---: | :---: | :---: |
-| ![pgadmin](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/pgadminlogo.png) | ![python](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/pythonlogo.png) | ![jupyter](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/jupyterlogo.png) |
-| ![tableau](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/tableaulogo.png) |
+### **Our Goal**
 
-##### **Data Cleaning and Analysis**
-We will use Pandas and Jupyter Notebook to clean and sort our data and use Python to further explore our data.
+Supply chain disruptions are consequence of different factors as:
 
-##### **Database Storage**
-We intend to use Postgres to create our database and house the data on AWS so all group members will have access to the database.
+- Lack of visibility
+- Inadequate technology
+- Motor vehicle troubles
+- Lost packages
+- Weather Conditions
+- Traffic
+- High Volume shipments
+- Failed delivery attempt
+- Customs
+- Lack of clarity
 
-##### **Machine Learning**
-SciKitLearn is the ML library we'll be using to create a supervised machine learning regression model.
-Our training and testing setup will be used to verify precision and sensitivity, and we will use the summary statistics output
-to determine the most accurate model to use.
+Our goal is directed into answering the following questions:
 
-##### **Dashboard**
-Tableau will be used as our visualization tool to create an interactive dashboard to tell the story of the data.  Graphs and plots from Plotly and
-SciKitLearn may also be used in the analysis process.
+- **How to predict the supply chain disruption?**
+- **What type of features are impacting those disruptions?**
 
-### **Proposal ERD Diagram**
+### **Resources**
 
-Our diagram is diplayed on the following image
+#### **Data**
 
-![ERD](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/DataCoSupplyChain_ER-Diagram.png)
+The datasets used for this project are taken from **Kaggle**
 
-Description of the diagram -> [ERD Diagram](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Colaboration/Deliverable%201.docx)
+[DataCo Dataset](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis?datasetId=435331)
 
-### **Proposal Machine Learning model**
+Three different files were used:
 
-- Proposal for ML model can be found on the following link:
+- Structured Data: DataCoSupplyChainDataset.csv
+- Unstructured Data: tokenizedaccesslogs.csv
+- Variable Description: DescriptionDataCoSupplyChain.csv
 
-[ML proposal](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Colaboration/Machine%20Learning%20Mockup.docx)
+#### **Tools Used**
+
+**Analysis**
+
+- Python
+ - Pandas
+ - Numpy
+ - Matplotlib
+ - Seaborn
+ - Geopandas
+
+**Database**
+
+- PostgreSQL
+- Amazon Web services
+
+**Visualization**
+
+- Python
+- Tableau
+
+**Machine Learning**
+
+- Imbalanced Learn RoS
+
+**Notebook**
+
+- Jupyter Notebook
+- Google Colab
+
+### **Entity Relationship Diagram (ERD)**
+
+![ERD](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/Revamped_ERD.png)
+
+### **Data Analysis**
+
+#### **Cleaning the data**
+
+> *Fig 1: correlation matrix*
+
+![matrix](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/matrix.png)
+
+With this matrix *Fig 1* we were able to identify the redundancies within the data.
+
+> *Fig 2: Delivery Status by Market*
+
+![deliverystatus](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/deliverystatus.png)
+
+With *Fig 2* we observed that in all markets the amount of "Late deliveries" is higher than the rest.
+
+We can focus on the three main markets with "Late Deliveries": **Europe**, **LATAM** and **Pacific Asia**
+
+> *Fig 3: Sales Demand per Market*
+
+![sales](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/Sales_Demand_per_Market.png)
+
+*Fig 3* confirms that higher sales are distributed in the three main markets mentioned previously.
+
+This could be part of the answer to **features impacting disruptions** meaning that a High Volume of shipments can affect the Deliveries.
+
+> *Fig 4: Store location by Country*
+
+![store](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/storelocation.png)
+
+In this dataset the Latitude and Longitude represents the location of the stores. As showed on *Fig 4* majority of the stores are located in North America.
+
+We can suggest to DataCo to open more Stores or Distribution Centres within the rest of the market. By having North America as main Distributor, we are adding features contributing to the disruptions. Some of the possibilities could be; lost packages, weather conditions, customs.
+
+### **Acknowledgements**
+
+Thanks to:
+
+- Univeristy of Toronto
+- Instructor Hassan Ahmed
+- Teaching Instructor for this project Laurel Lobo
