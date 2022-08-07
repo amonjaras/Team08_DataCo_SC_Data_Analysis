@@ -7,7 +7,7 @@ We will use Pandas, Excel and Jupyter Notebook to clean and sort our data and us
 We intend to use Postgres SQL to create our database and house the data on AWS so all group members will have access to the database.
 
 ## Machine Learning
-SciKitLearn is the ML library we'll be using to create a supervised classification machine learning  model. 
+SciKitLearn is the ML library we'll be using to create a supervised Logitic Regression machine learning  model. 
 Our training and testing setup will be used to verify precision and sensitivity, and we will use the summary statistics output 
 to determine the most accurate model to use.
 
