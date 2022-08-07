@@ -141,6 +141,10 @@ This could be part of the answer to **features impacting disruptions** meaning t
 In this dataset the Latitude and Longitude represents the location of the stores. As showed on *Fig 4* majority of the stores are located in North America.
 
 We can suggest to DataCo to open more Stores or Distribution Centres within the rest of the market. By having North America as main Distributor, we are adding features contributing to the disruptions. Some of the possibilities could be; lost packages, weather conditions, customs.
+### 
+Logistic regression estimates the probability of an event occurring given a finite set of expected outcomes.
+Increasing the accuracy of the model using neural networks and different models.
+We used the logistic regression model because it is a very simple model that is capable of solving our problem.
 
 ### **Acknowledgements**
 
