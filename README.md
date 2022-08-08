@@ -98,7 +98,7 @@ The presentation for this project can be found on the following link
 **Visualization**
 
 - Python [ETL Code](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/ETL/DataCo_ETL.ipynb)
-- Tableau
+- Tableau [Dashboard](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Dashboard/Final_project_vizualizations.twbx)
 
 **Machine Learning**
 
