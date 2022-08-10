@@ -191,5 +191,5 @@ Analyzing the features, it is evident that the Second Class shipment is creating
 Thanks to:
 
 - **Univeristy of Toronto**
-- Instructor **Hassan Ahmed**
+- Instructor **Hassan Ahmad**
 - Teaching Instructor for this project **Laurel Lobo**
