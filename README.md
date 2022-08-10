@@ -98,7 +98,7 @@ The presentation for this project can be found on the following link
 **Visualization**
 
 - Python [ETL Code](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/ETL/DataCo_ETL.ipynb)
-- Tableau [Dashboard](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Dashboard/Final_project_vizualizations.twbx)
+- Tableau [Dashboard](https://public.tableau.com/app/profile/brent.newman/viz/Final_project_vizualizations/FinalStory?publish=yes)
 
 **Machine Learning**
 
@@ -107,7 +107,6 @@ The presentation for this project can be found on the following link
 **Notebook**
 
 - Jupyter Notebook
-- Google Colab
 
 ### **Entity Relationship Diagram (ERD)**
 
@@ -115,49 +114,82 @@ The presentation for this project can be found on the following link
 
 ### **Data Analysis**
 
-#### **Cleaning the data**
+#### **Data Exploration**
 
-> *Fig 1: correlation matrix*
+In order to analyze the data, we need to follow the ETL(**E**xtract, **T**ransform and **L**oad) process. *Fig 1*
+
+> *Fig 1: ETL Process*
+
+![ETL](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/etl.png)
+
+We have extracted the data from the main source, as a first step we checked if the data contained `Null` values and drop them. We also dropped columns with unnecessary information for our analysis.
+
+We removed data with no variance, since is repetitive and will have an impact on our analysis.
+
+Finally we were able to generate a correlation matrix between variables in order to identify and discard redundancies in our dataset. *Fig 2*
+
+> *Fig 2: correlation matrix*
 
 ![matrix](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/matrix.png)
 
-With this matrix *Fig 1* we were able to identify the redundancies within the data.
+Finally we have created a clean dataset and performed some visualizations.
 
-> *Fig 2: Delivery Status by Market*
+**Shipment Dataset**
 
-![deliverystatus](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/deliverystatus.png)
+Since DataCo experienced high rate on late deliveries, we visualized the rate by year.
 
-With *Fig 2* we observed that in all markets the amount of "Late deliveries" is higher than the rest.
+> *Fig 3: Delivery Status per Year*
 
-We can focus on the three main markets with "Late Deliveries": **Europe**, **LATAM** and **Pacific Asia**
+![peryear](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/deliveryperyear.png)
 
-> *Fig 3: Sales Demand per Market*
+We also compared the Delivery Status by Payment Type to see if there was a relationship between the them. As showed on *Fig 4* type of payment is not the root cause of the late deliveries.
+
+![payment](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/deliveryperpayment.png)
+
+**Finance Dataset**
+
+> *Fig 5: Sales Demand per Market*
 
 ![sales](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/Sales_Demand_per_Market.png)
 
-*Fig 3* confirms that higher sales are distributed in the three main markets mentioned previously.
+*Fig 5* confirms that higher sales are distributed in the three main markets mentioned previously.
 
-This could be part of the answer to **features impacting disruptions** meaning that a High Volume of shipments can affect the Deliveries.
-
-> *Fig 4: Store location by Country*
+> *Fig 6: Store location by Country*
 
 ![store](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/storelocation.png)
 
-In this dataset the Latitude and Longitude represents the location of the stores. As showed on *Fig 4* majority of the stores are located in North America.
+In this dataset the Latitude and Longitude represents the location of the stores. As showed on *Fig 6* majority of the stores are located in North America.
 
 We can suggest to DataCo to open more Stores or Distribution Centres within the rest of the market. By having North America as main Distributor, we are adding features contributing to the disruptions. Some of the possibilities could be; lost packages, weather conditions, customs.
 
+#### **Database**
+
+With our clean dataset, we decided to use AWS services, by creating a database using AWS RDS; this service will allow us to have a local connection with our pdAdmin Installation.
+
+Creation of Tables is done with pgAdmin, to populate the tables to AWS we require the S3 and buckets services. With the buckets on line we will give access to the rest of the team for deeper analysis.
+
+> *Fig 7: Database connection*
+
+![database](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/database.PNG)
 
 #### **Machine Learning**
 
-Logistic regression estimates the probability of an event occurring given a finite set of expected outcomes.
+Logistic Regression is an example of supervised learning. Used to calculate / predict the probability of a binary event occurring.
 Increasing the accuracy of the model using neural networks and different models.
 We used the logistic regression model because it is a very simple model that is capable of solving our problem.
+
+On our fist trial we got an accuracy of 50%, after removing more columns, our analysis gave us an accuracy of 70%
+
+Analyzing the features, it is evident that the Second Class shipment is creating the largest negative impact on deliveries.
+
+> *Fig 8: Relevant Features*
+
+![ml](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/Most%20Relevant%20features.PNG)
 
 ### **Acknowledgements**
 
 Thanks to:
 
-- Univeristy of Toronto
-- Instructor Hassan Ahmed
-- Teaching Instructor for this project Laurel Lobo
+- **Univeristy of Toronto**
+- Instructor **Hassan Ahmed**
+- Teaching Instructor for this project **Laurel Lobo**
