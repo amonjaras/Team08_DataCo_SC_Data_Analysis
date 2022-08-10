@@ -170,7 +170,7 @@ Creation of Tables is done with pgAdmin, to populate the tables to AWS we requir
 
 > *Fig 7: Database connection*
 
-![database](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/database.PNG)
+![database](https://github.com/amonjaras/Team08_DataCo_SC_Data_Analysis/blob/main/Images/database.png)
 
 #### **Machine Learning**
 
@@ -191,5 +191,5 @@ Analyzing the features, it is evident that the Second Class shipment is creating
 Thanks to:
 
 - **Univeristy of Toronto**
-- Instructor **Hassan Ahmed**
+- Instructor **Hassan Ahmad**
 - Teaching Instructor for this project **Laurel Lobo**
